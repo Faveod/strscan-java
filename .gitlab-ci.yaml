@@ -1,0 +1,24 @@
+image: java:11-jdk
+
+stages:
+  - build
+  - test
+  - doc
+
+before_script:
+  - export GRADLE_USER_HOME=`pwd`/.gradle
+
+build:
+  stage: build
+  script:
+    - ./gradlew assemble
+
+test:
+  stage: test
+  script:
+    - ./gradlew check
+
+doc:
+  stage: doc
+  script:
+    - ./gradlew javadoc
