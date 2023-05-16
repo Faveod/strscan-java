@@ -1,5 +1,7 @@
 # StringScanner
 
+[![Java CI](https://github.com/Faveod/strscan-java/actions/workflows/ci.yml/badge.svg)](https://github.com/Faveod/strscan-java/actions/workflows/ci.yml)
+
 This is a clone of [Ruby's `StringScanner`](https://docs.ruby-lang.org/en/3.2/StringScanner.html) from `strscan`.
 
 It's not feature complete, but it has all the minimum scanning features
