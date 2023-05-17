@@ -1,9 +1,12 @@
 plugins {
     id 'java-library'
+    id 'maven-publish'
 }
 
-group 'com.faveod.strscan'
-version '1.0-SNAPSHOT'
+group = 'com.faveod.strscan'
+archivesBaseName = 'faveod-strscan'
+version = "1.0.0"
+description = "A clone of Ruby's StringScanner from `strscan`"
 
 repositories {
     mavenCentral()
@@ -16,4 +19,64 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'strscan'
+            from components.java
+            versionMapping {
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
+                }
+                usage('java-runtime') {
+                    fromResolutionResult()
+                }
+            }
+            pom {
+                name = 'StringScanner'
+                description = 'A concise description of my library'
+                url = 'https://github.com/Faveod/strscan-java'
+                licenses {
+                    license {
+                        name = 'MIT'
+                        url = 'https://github.com/Faveod/strscan-java/blob/master/LICENSE'
+                    }
+                }
+                developers {
+                    developer {
+                        name = 'Firas al-Khalil'
+                        email = 'firas.alkhalil@faveod.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:github.com/Faveod/strscan-java'
+                    developerConnection = 'scm:git:git@github.com:Faveod/strscan-java.git'
+                    url = 'https://github.com/Faveod/strscan-java.git'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = 'OSSRH'
+            url 'https://oss.sonatype.org/service/local/staging/deploy/maven2/'
+            credentials {
+                username = System.getenv("MAVEN_USERNAME")
+                password = System.getenv("MAVEN_PASSWORD")
+            }
+        }
+    }
+}
+
+javadoc {
+    if(JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
 }
