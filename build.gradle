@@ -79,3 +79,10 @@ javadoc {
         options.addBooleanOption('html5', true)
     }
 }
+
+signing {
+    def signingKey = System.getenv("PGP_KEY")
+    def signingPassword = System.getenv("PGP_PASSWORD")
+    useInMemoryPgpKeys(signingKey, signingPassword)
+    sign publishing.publications.mavenJava
+}
