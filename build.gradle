@@ -82,8 +82,9 @@ javadoc {
 }
 
 signing {
+    def signingKeyId = System.getenv("PGP_KEY_ID")
     def signingKey = System.getenv("PGP_KEY")
     def signingPassword = System.getenv("PGP_PASSWORD")
-    useInMemoryPgpKeys(signingKey, signingPassword)
+    useInMemoryPgpKeys(signingKeyId, signingKey, signingPassword)
     sign publishing.publications.mavenJava
 }
