@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'com.faveod.strscan'
+group = 'com.faveod'
 archivesBaseName = 'faveod-strscan'
 version = "1.0.0"
 description = "A clone of Ruby's StringScanner from `strscan`"
@@ -40,7 +40,6 @@ publishing {
                 }
             }
             pom {
-                name = 'StringScanner'
                 description = 'A concise description of my library'
                 url = 'https://github.com/Faveod/strscan-java'
                 licenses {

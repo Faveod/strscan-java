@@ -81,7 +81,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.strscan [test]">
+  <component name="RunManager" selected="Gradle.strscan [build]">
     <configuration name="TestStringScanner.exampleFromRubyDocs" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -191,9 +191,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.strscan [build]" />
         <item itemvalue="Gradle.strscan [test]" />
         <item itemvalue="Gradle.strscan [assemble]" />
-        <item itemvalue="Gradle.strscan [build]" />
         <item itemvalue="Gradle.strscan [javadoc]" />
         <item itemvalue="Gradle.TestStringScanner.exampleFromRubyDocs" />
       </list>
