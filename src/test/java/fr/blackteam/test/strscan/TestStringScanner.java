@@ -1,6 +1,6 @@
-package com.faveod.test.strscan;
+package fr.blackteam.test.strscan;
 
-import com.faveod.strscan.StringScanner;
+import fr.blackteam.strscan.StringScanner;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

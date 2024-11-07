@@ -4,8 +4,8 @@ plugins {
     id 'signing'
 }
 
-group = 'com.faveod'
-archivesBaseName = 'faveod-strscan'
+group = 'fr.blackteam'
+archivesBaseName = 'strscan'
 version = "1.0.0"
 description = "A clone of Ruby's StringScanner from `strscan`"
 

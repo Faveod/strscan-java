@@ -1,4 +1,4 @@
-package com.faveod.strscan;
+package fr.blackteam.strscan;
 
 import java.util.ArrayList;
 import java.util.HashMap;

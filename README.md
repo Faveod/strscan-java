@@ -15,7 +15,7 @@ Tries to match with pattern at the current position. If there's a match, the sca
 returns the matched string. Otherwise, the scanner returns `null`.
 
 ```java
-import com.faveod.strscan.StringScanner;
+import fr.blackteam.strscan.StringScanner;
 import java.util.regex.Pattern;
 
 var words = Pattern.compile("\\w+");
@@ -49,7 +49,7 @@ Scans the string until the pattern is matched. Returns the substring up to and i
 the scan pointer to that location. If there is no match, `null` is returned.
 
 ```java
-import com.faveod.strscan.StringScanner;
+import fr.blackteam.strscan.StringScanner;
 import java.util.regex.Pattern;
 
 var s = new StringScanner("Fri Dec 12 1975 14:39");
